@@ -1,0 +1,26 @@
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+<div class="Custom">
+<div class="login">
+  <div class="login-header">
+    <h1>Login</h1>
+  </div>
+  <div class="login-form">
+    <h3>Email</h3>
+    <input type="text" minlength="4" maxlength="30" [(ngModel)]="Login.email" name="email" placeholder="Email ID"/><br>
+    <h3>Password</h3>
+    <input type="password" minlength="6" maxlength="20" (keyup.Enter)="LoginUser()" [(ngModel)]="Login.password" name="password" placeholder="Password"/>
+    <br>
+    <input type="submit" value="Login" (click)="LoginUser()" class="login-button"/>
+    <br>
+    <br>
+    <h6 class="sign-up">Create new account !</h6>
+    <br>
+    <input type="button" value="Signup" routerLink="/signup"  class="login-button"/>
+    <br>
+    <!-- <h6 class="no-access">Can't access your account?</h6> -->
+  </div>
+</div>
+</div>
+<!-- <div class="error-page">
+  <div class="try-again">Error: Try again?</div>
+</div> -->

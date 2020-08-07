@@ -1,0 +1,44 @@
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
+<div class="Custom">
+<div class="signup">
+  <div class="signup-header">
+    <h1>Sign Up</h1>
+  </div>
+  <div class="signup-form">
+    <h4>First Name</h4>
+    <input type="text" minlength="6" maxlength="20" [(ngModel)]="signup.firstname" name="firstname" placeholder="First Name"/><br>
+    <h4>Last Name</h4>
+    <input type="text" minlength="6" maxlength="20" [(ngModel)]="signup.lastname" name="lastname" placeholder="Last Name"/><br>
+    <h4>Email Id</h4>
+    <input type="text" minlength="4" maxlength="30" [(ngModel)]="signup.emailid" name="emailid" placeholder="Email ID"/><br>
+    <h4>Mobile Number</h4>
+    <input type="number" minlength="10" maxlength="10" [(ngModel)]="signup.mobilenumber" name="mobilenumber" placeholder="Mobile Number"/><br>
+      <h4>Gender</h4>
+      <div class="row">
+      <div class="col-xs-4 col-sm-4" style="margin-left: 15px;">
+            <label style="color: white;"><input type="checkbox" (change)="signup.female=false" name="male" [(ngModel)]="signup.male"  /> Male </label>
+      </div>
+      <div class="col-xs-4  col-sm-4">
+          <label style="color: white;"><input type="checkbox"   (change)="signup.male=false" name="female" [(ngModel)]="signup.female" /> Female </label>
+      </div>
+  </div>   
+  <h4>Address</h4>
+    <textarea placeholder="Type your Address" [(ngModel)]="signup.address" name="address"></textarea>
+    <h4>Password</h4>
+    <input type="password" minlength="8" maxlength="20" [(ngModel)]="signup.password" name="password" placeholder="Password"/>
+    <h4>Confirm Password</h4>
+    <input type="password" minlength="8" maxlength="20" [(ngModel)]="signup.confirmpassword" name="confirmpassword" placeholder="Confirm Password"/>
+    
+    <br>
+    <input type="submit" (click)="SignUp()"  value="Sign Up" class="signup-button"/>
+    <br>
+    <br>
+    <h6 class="login">Already have account ?</h6>
+    <br>
+    <input type="button" value="Login" routerLink="/login"  class="signup-button"/>
+    <br>
+  </div>
+</div>
+<!-- <div class="error-page">
+  <div class="try-again">Error: Try again?</div>
+</div> -->
