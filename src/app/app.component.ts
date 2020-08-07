@@ -11,11 +11,11 @@ export class AppComponent implements OnInit {
   constructor(public router:Router){}
 
   ngOnInit(){
-   /*  if(!localStorage.getItem('email')){
+    if(!localStorage.getItem('email')){
     localStorage.clear();
     this.router.navigate(['/signup'])
     }else{
       this.router.navigate(['/login'])
-    } */
+    }
   }
 }
